@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>1</li>
+			<li class="demo2">2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<p id="p1">dd</p>
+	</body>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//创建元素$("<img/>")
+			//$("<p id='p1'>dddd</p>")
+			//jquery追加元素8个方法
+			//1.append()  appendTo()  内部后
+			$("#ul1").append($("<p>append</p>"));
+			$("<p>appendTo</p>").appendTo($("#ul1"));
+//			
+//			//2.prepend() prependTo()  内部前
+			$("#ul1").prepend($("<p>prepend</p>"));
+			$("<p>prependTo</p>").prependTo($("#ul1"));
+//			
+//			//3.after()  insertAfter()  外部后
+			$("#ul1").after($("<p>after</p>"));
+			$("<p>insertAfter</p>").insertAfter($("#ul1"));
+//			
+//			//4.before()  insertBefore()  外部前
+			$("#ul1").before($("<p>before</p>"));
+			$("<p>insertBefore</p>").insertBefore($("#ul1"));
+			
+			//删除元素
+			//1.remove()  删除本身及其子元素
+//			$("#ul1").remove();
+//			$("li").remove();
+//			$("li").remove(".demo2");
+			
+			//2.empty()  删除其子元素
+//			$("#ul1").empty();
+			
+			//替换
+			//1.replaceWith()
+//			$("li").replaceWith($("<p>dddd</p>"));
+			
+			//2.replaceAll()
+//			$("<div>div</div>").replaceAll($("li"));
+			
+			//遍历   each()
+//			$("li").each(function(index){
+//				//console.log("index="+index+"*****element="+element);
+//				$(this).css("color","pink");
+//			});
+			
+			//克隆
+			//clone()
+//			$("ul").clone().insertAfter($("#ul1"));
+//			$("p").clone().insertBefore($("#ul1"));
+			
+//			$("#p1").click(function(){
+//				alert("ddd");
+//			});
+//			$("p").clone(false).insertBefore($("#ul1"));
+			
+			//jquery对象与DOM对象区别
+			//console.log($("li"));
+			
+//			var ul=document.getElementById("ul1");
+//			console.log(ul);
+			
+			//jQuery对象转换成DOM对象
+			//1.[]
+//			console.log($("#ul1"));
+//			console.log($("#ul1")[0]);
+			
+			//2.get(下标)
+//			console.log($("#ul1"));
+//			console.log($("#ul1").get(0));
+			
+			//DOM对象转换成jQuery对象
+			//$()
+		});
+	</script>
+</html>
